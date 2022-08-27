@@ -1,5 +1,6 @@
 
 
+
 def compose(expression):
     arr = []
     text = ''
@@ -7,7 +8,8 @@ def compose(expression):
         if i.isdigit():
             text += i
         if not i.isdigit():
-            arr.append(text)
+            if text:
+                arr.append(text)
             arr.append(i)
             text = ''
     if text:
